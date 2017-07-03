@@ -6,7 +6,6 @@
 package com.mycompany.gamenotes;
 
 import java.awt.AWTException;
-import java.awt.Dialog.ModalityType;
 import java.awt.Rectangle;
 import java.awt.Robot;
 import java.awt.Toolkit;
@@ -16,19 +15,15 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.imageio.ImageIO;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
 
 /**
  *
  * @author Kevyn
  */
 public class SaveController {
+    
     public void captureScreen(){
         try {
-            // Create save window
-            //SaveDialog saveDialog = new SaveDialog();
-
             // Save current screen to jpg          
             Robot robot = new Robot();
             String format = "jpg";

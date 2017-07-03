@@ -1,18 +1,7 @@
 package com.mycompany.gamenotes;
 
-import java.awt.AWTException;
-import java.awt.Rectangle;
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.imageio.ImageIO;
-import javax.swing.JFrame;
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 import org.jnativehook.keyboard.NativeKeyEvent;
@@ -29,8 +18,8 @@ public class GameNotesMain implements NativeKeyListener {
     public void nativeKeyPressed(NativeKeyEvent e) {
         int key = e.getKeyCode();
         
-        if (key == NativeKeyEvent.VC_ENTER) {
-            saveController.captureScreen();
+        if (key == NativeKeyEvent.VC_F10) {
+           saveController.captureScreen();
         }
         else if (key == NativeKeyEvent.VC_ESCAPE) {
             System.exit(0);
